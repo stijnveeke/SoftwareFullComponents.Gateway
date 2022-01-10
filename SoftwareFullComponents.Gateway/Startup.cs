@@ -61,8 +61,6 @@ namespace WebGateway
 
             app.UseRouting();
             app.UseCors(builder => builder.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
-            //app.UseAuthentication();
-            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
