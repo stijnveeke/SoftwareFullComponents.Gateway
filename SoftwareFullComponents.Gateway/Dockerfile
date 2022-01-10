@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["CommunicationLayer/Gateways/WebGateway/WebGateway.csproj", "CommunicationLayer/Gateways/WebGateway/"]
-RUN dotnet restore "CommunicationLayer/Gateways/WebGateway/WebGateway.csproj"
+COPY ["SoftwareFullComponents.Gateway/SoftwareFullComponents.Gateway.csproj", "SoftwareFullComponents.Gateway/"]
+RUN dotnet restore "SoftwareFullComponents.Gateway/SoftwareFullComponents.Gateway.csproj"
 COPY . .
-WORKDIR "/src/CommunicationLayer/Gateways/WebGateway"
-RUN dotnet build "WebGateway.csproj" -c Release -o /app/build
+WORKDIR "/src/SoftwareFullComponents.Gateway"
+RUN dotnet build "SoftwareFullComponents.Gateway.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebGateway.csproj" -c Release -o /app/publish
+RUN dotnet publish "SoftwareFullComponents.Gateway.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WebGateway.dll"]
+ENTRYPOINT ["dotnet", "SoftwareFullComponents.Gateway.dll"]
