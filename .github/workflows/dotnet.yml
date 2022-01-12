@@ -31,7 +31,7 @@ jobs:
       with:
         tags: v1, latest
         # Name of the Docker image
-        image: 3739323298328/product-component
+        image: 3739323298328/web-gateway
         # Target Docker registry
         registry: docker.io
         # Location of Dockerfile, if not Dockerfile in root directory
