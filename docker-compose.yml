@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  softwarefullcomponents.gateway:
+    image: ${DOCKER_REGISTRY-}softwarefullcomponentsgateway
+    build:
+      context: .
+      dockerfile: SoftwareFullComponents.Gateway/Dockerfile
