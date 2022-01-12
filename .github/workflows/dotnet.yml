@@ -29,8 +29,9 @@ jobs:
       # uses: mr-smithers-excellent/docker-build-push@a7fe6652db5c7274374844e81692992f5a2befb9
       uses: mr-smithers-excellent/docker-build-push@v5.6
       with:
+        tags: v1, latest
         # Name of the Docker image
-        image: 3739323298328/product-component
+        image: 3739323298328/web-gateway
         # Target Docker registry
         registry: docker.io
         # Location of Dockerfile, if not Dockerfile in root directory
