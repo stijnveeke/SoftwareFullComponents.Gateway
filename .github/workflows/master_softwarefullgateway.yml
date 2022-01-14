@@ -64,7 +64,7 @@ jobs:
         app-name: 'softwarefullgateway'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_6e1eb8e7f17f41a5939439ddf415b36e }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dd7952fa6fe9464fb7ea3fc35d178767 }}/3739323298328/web-gateway:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dd7952fa6fe9464fb7ea3fc35d178767 }}/web-gateway:${{ github.sha }}'
   upload-to-sonarcloud:
     name: Upload to sonarcloud
     needs: build
