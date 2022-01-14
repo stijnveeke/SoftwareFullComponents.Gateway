@@ -25,7 +25,7 @@
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": [ "create:product" ]
+        "AllowedScopes": []
       }
     },
     {
@@ -70,11 +70,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/product/{id}",
-      "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "Get" ]
     }
   ],
 

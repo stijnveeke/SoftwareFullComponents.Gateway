@@ -6,3 +6,6 @@ services:
     build:
       context: .
       dockerfile: SoftwareFullComponents.Gateway/Dockerfile
+    ports:
+      - "8090:80"
+      - "5021:443"
