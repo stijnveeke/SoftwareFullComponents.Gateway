@@ -5,7 +5,8 @@
       "DownstreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
-          "Host": "softwarefullproductcomponent.azurewebsites.net"
+          "Host": "softwarefullproductcomponent.azurewebsites.net",
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/product",
@@ -17,7 +18,7 @@
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
-          "Port": 80
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/product",
@@ -33,7 +34,7 @@
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
-          "Port": 80
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/product/{id}",
@@ -49,7 +50,7 @@
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
-          "Port": 80
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/product/{id}",
@@ -65,7 +66,7 @@
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
-          "Port": 80
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/product/{id}",
