@@ -2,7 +2,7 @@
   "Routes": [
     {
       "DownStreamPathTemplate": "/api/products",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
@@ -14,7 +14,7 @@
     },
     {
       "DownStreamPathTemplate": "/api/products",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
@@ -30,7 +30,7 @@
     },
     {
       "DownStreamPathTemplate": "/api/products/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
@@ -46,7 +46,7 @@
     },
     {
       "DownStreamPathTemplate": "/api/products/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
@@ -62,7 +62,7 @@
     },
     {
       "DownStreamPathTemplate": "/api/products/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
           "Host": "softwarefullproductcomponent.azurewebsites.net",
@@ -75,6 +75,6 @@
   ],
 
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5021"
+    "BaseUrl": "https://softwarefullgateway.azurewebsites.net/"
   }
 }
