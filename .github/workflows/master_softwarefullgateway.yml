@@ -11,6 +11,22 @@ on:
 
 jobs:
   build:
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: Restore ProductComponent dependencies
+        run: dotnet restore SoftwareFullComponents.Gateway/SoftwareFullComponents.Gateway.csproj 
+      - name: Build ProductComponent
+        run: dotnet build SoftwareFullComponents.Gateway/SoftwareFullComponents.Gateway.csproj --no-restore
+      - name: Test ProductComponent
+        run: dotnet test SoftwareFullComponents.Gateway/SoftwareFullComponents.Gateway.csproj --no-build --verbosity normal
+        
+  push-to-hub:
     runs-on: 'ubuntu-latest'
 
     steps:
