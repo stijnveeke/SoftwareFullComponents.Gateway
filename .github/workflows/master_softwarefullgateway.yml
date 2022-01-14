@@ -28,7 +28,7 @@ jobs:
         
   push-to-hub:
     runs-on: 'ubuntu-latest'
-
+    needs: build
     steps:
     - uses: actions/checkout@v2
 
@@ -51,7 +51,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: push-to-hub
     environment:
       name: 'production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
