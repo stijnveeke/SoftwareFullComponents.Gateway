@@ -5,8 +5,7 @@
       "DownstreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
-          "Host": "softwarefullproductcomponent.azurewebsites.net",
-          "Port": 80
+          "Host": "softwarefullproductcomponent.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/product",
