@@ -1,3 +1,80 @@
 {
+  "Routes": [
+    {
+      "DownStreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "softwarefullproductcomponent.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "softwarefullproductcomponent.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownStreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "softwarefullproductcomponent.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownStreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "softwarefullproductcomponent.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/{id}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownStreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "softwarefullproductcomponent.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/product/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
 
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5021"
+  }
 }
